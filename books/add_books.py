@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from datetime import datetime
 import uuid
 def add_book(books, title, author, year, category):
@@ -30,3 +31,7 @@ libros2 = add_book(libros, "El Señor de los Anillos", "J.R.R. Tolkien", 1954, "
 print(libros)
 print(libros2)
 
+=======
+def add_book(param1, param2, param3):
+  print(param1, param2, param3) 
+>>>>>>> 78063110f966e2e687dc09e4f0e278ec11e24a14
