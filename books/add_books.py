@@ -24,9 +24,3 @@ def add_book(books, title, author, year, category):
 
     print("Libro agregado correctamente.")
     return books + [libro]
-
-libros = add_book([], "Cien años de soledad", "Gabriel García Márquez", 1967, "Ficción")
-libros2 = add_book(libros, "El Señor de los Anillos", "J.R.R. Tolkien", 1954, "Ficción")
-print(libros)
-print(libros2)
-
