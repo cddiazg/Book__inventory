@@ -2,11 +2,12 @@ from menus import table as tbl
 
 from utils.validations import to_valid_int
 # from books.add_books import add_book
+from books.show_books import show_all_books
 
 def menu_actions(action: int, data: list):
   match action:
     case 1:
-      pass
+      show_all_books(data)
     case 2:
       pass
     case 3:
