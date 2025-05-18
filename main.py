@@ -1,9 +1,9 @@
-from menus import table
+from menus import table as tbl
 
 from utils.validations import to_valid_int
 # from books.add_books import add_book
 
-def menu_actions(action: int):
+def menu_actions(action: int, data: list):
   match action:
     case 1:
       pass
@@ -16,28 +16,35 @@ def menu_actions(action: int):
     case 5:
       pass
     case _:
-      table.show_error("Opción no válida")
+      tbl.show_error("Opción no válida")
 
 def start():
   # First menu
   title = "Inventario de libros"
-  exit = ["Salir"]
-  main_options = ["Agregar libro", "Eliminar libro", "Buscar libro", "Modificar libro", "Mostrar libros"] + exit
-  # table.show_table(title, options)
-  # table.show_error("No se pudo cargar el inventario")
+  main_options = [
+    "Mostrar libros",
+    "Agregar libro",
+    "Buscar libro",
+    "Modificar libro",
+    "Eliminar libro",
+    "Salir"
+  ]
+  data = []
+  
   flag = True
   while flag:
-    table.show_menu(main_options, title)
+    tbl.show_menu(main_options, title)
     opt = to_valid_int(input("Selecciona una opción: "))
     if opt == None:
-      print("Opción no válida")
+      tbl.show_info("Opción no válida")
       continue
     
     if opt == main_options.index("Salir") + 1:
-      print("Saliendo...")
-      break
+      tbl.show_info("Saliendo...")
+      flag = False
+      continue
     
-    menu_actions(opt)
+    menu_actions(opt, data)
   
 if __name__ == "__main__":
   start()
