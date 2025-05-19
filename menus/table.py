@@ -98,11 +98,20 @@ def show_info(info: str):
     print(f"{WHITE}║{RESET} {DARKGRAY}Info: {WHITE}{info.ljust(width - 8)}{RESET} {WHITE}║{RESET}")
     print(f"{WHITE}╚{"═"*width}╝{RESET}")
 
-# Function to display an error message in a table format
-def show_error(error: str):
-    width = len(error) + 30  # Add padding for the borders  
+# Function to display an information message in a table format
+def show_sucess(msg: str):
+    width = len(msg) + 30  # Add padding for the borders  
 
     # Print the table
+    print(f"{GREEN}╔{"═"*width}╗{RESET}")
+    print(f"{GREEN}║{RESET} {GREEN}Info: {WHITE}{msg.ljust(width - 8)}{RESET} {GREEN}║{RESET}")
+    print(f"{GREEN}╚{"═"*width}╝{RESET}")
+
+# Function to display an error message in a table format
+def show_error(error: str):
+    message_error = f"{RED}Error: {WHITE}{error}{RESET}"
+    width = len(message_error) # Add padding for the borders  
+    # Print the table
     print(f"{RED}╔{"═"*width}╗{RESET}")
-    print(f"{RED}║{RESET} {RED}Error: {WHITE}{error.ljust(width - 9)}{RESET} {RED}║{RESET}")
+    print(f"{RED}║{RESET} {message_error.ljust(width + 12)} {RED}║{RESET}")
     print(f"{RED}╚{"═"*width}╝{RESET}")
