@@ -7,8 +7,8 @@ def book_lend(books, id_book):
     
     for book in books:
         if id_book.lower() == book["id"].lower():
-            if book["Status"] == "Prestado":
-                return book["Loan"]
+            if book["status"] == "Prestado":
+                return book["loan"]
             else: 
                 return {}
 
