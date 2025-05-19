@@ -17,7 +17,7 @@ def show_menu(options: list, title: str):
     all_options = options + [title]
     # Calculate the total width of the table
     max_width = max([len(opt) for opt in all_options])
-    width = max_width + 4  # Add padding for the borders
+    width = max_width + 8  # Add padding for the borders
 
     # Print the table
     print(f"{BLUE}╔{"═"*width}╗{RESET}")
@@ -30,7 +30,7 @@ def show_menu(options: list, title: str):
 # Function to display a table with book information
 def show_books_in_table(books: list, table_title: str):
     if not books or len(books) == 0:
-        tbl.show_error("Error: No hay datos o títulos para mostrar.")
+        show_error("Error: No hay datos o títulos para mostrar.")
         return
       
     titles = {
@@ -60,7 +60,7 @@ def show_books_in_table(books: list, table_title: str):
     for book in books:
         id_book = book.get('id') 
         if id_book == None:
-            tbl.show_error(f"Error: {book} no tiene ID")
+            show_error(f"Error: {book} no tiene ID")
             continue
         
         title = book.get('title', '-')
