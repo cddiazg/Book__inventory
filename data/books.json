@@ -1,0 +1,227 @@
+[
+  {
+    "id": "LIB-7FDB4",
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "pub_year": 1967,
+    "category": "Ficción",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-8A2B3",
+    "title": "El amor en los tiempos del cólera",
+    "author": "Gabriel García Márquez",
+    "pub_year": 1985,
+    "category": "Ficción",
+    "status": "Prestado",
+    "loan": {
+      "name": "Ana Rodríguez",
+      "loan_date": "2025-05-10"
+    }
+  },
+  {
+    "id": "LIB-9C3A1",
+    "title": "Don Quijote de la Mancha",
+    "author": "Miguel de Cervantes Saavedra",
+    "pub_year": 1605,
+    "category": "Clásico",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-A1B2C",
+    "title": "La sombra del viento",
+    "author": "Carlos Ruiz Zafón",
+    "pub_year": 2001,
+    "category": "Misterio",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-B2C3D",
+    "title": "Rayuela",
+    "author": "Julio Cortázar",
+    "pub_year": 1963,
+    "category": "Ficción experimental",
+    "status": "Prestado",
+    "loan": {
+      "name": "Pedro Gómez",
+      "loan_date": "2025-05-15"
+    }
+  },
+  {
+    "id": "LIB-C3D4E",
+    "title": "Crónica de una muerte anunciada",
+    "author": "Gabriel García Márquez",
+    "pub_year": 1981,
+    "category": "Ficción",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-D4E5F",
+    "title": "Orgullo y prejuicio",
+    "author": "Jane Austen",
+    "pub_year": 1813,
+    "category": "Romance",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-E5F6G",
+    "title": "1984",
+    "author": "George Orwell",
+    "pub_year": 1949,
+    "category": "Distopía",
+    "status": "Prestado",
+    "loan": {
+      "name": "Laura Pérez",
+      "loan_date": "2025-05-01"
+    }
+  },
+  {
+    "id": "LIB-F6G7H",
+    "title": "Un mundo feliz",
+    "author": "Aldous Huxley",
+    "pub_year": 1932,
+    "category": "Distopía",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-G7H8I",
+    "title": "El principito",
+    "author": "Antoine de Saint-Exupéry",
+    "pub_year": 1943,
+    "category": "Infantil",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-H8I9J",
+    "title": "La elegancia del erizo",
+    "author": "Muriel Barbery",
+    "pub_year": 2006,
+    "category": "Ficción",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-I9J0K",
+    "title": "El infinito en un junco",
+    "author": "Irene Vallejo",
+    "pub_year": 2019,
+    "category": "Ensayo",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-J0K1L",
+    "title": "Patria",
+    "author": "Fernando Aramburu",
+    "pub_year": 2016,
+    "category": "Ficción histórica",
+    "status": "Prestado",
+    "loan": {
+      "name": "Maria Elena Restrepo",
+      "loan_date": "2025-05-15"
+    }
+  },
+  {
+    "id": "LIB-K1L2M",
+    "title": "El sanador de caballos",
+    "author": "Gonzalo Giner",
+    "pub_year": 2008,
+    "category": "Ficción histórica",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-L2M3N",
+    "title": "La catedral del mar",
+    "author": "Ildefonso Falcones",
+    "pub_year": 2006,
+    "category": "Ficción histórica",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-M3N4O",
+    "title": "El invierno del mundo",
+    "author": "Ken Follett",
+    "pub_year": 2012,
+    "category": "Ficción histórica",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-N4O5P",
+    "title": "La caída de los gigantes",
+    "author": "Ken Follett",
+    "pub_year": 2010,
+    "category": "Ficción histórica",
+    "status": "Prestado",
+    "loan": {
+      "name": "David Ramírez",
+      "loan_date": "2025-05-11"
+    }
+  },
+  {
+    "id": "LIB-O5P6Q",
+    "title": "El umbral de la eternidad",
+    "author": "Ken Follett",
+    "pub_year": 2014,
+    "category": "Ficción histórica",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-P6Q7R",
+    "title": "La chica del tambor",
+    "author": "John le Carré",
+    "pub_year": 1983,
+    "category": "Espionaje",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-Q7R8S",
+    "title": "El espía que surgió del frío",
+    "author": "John le Carré",
+    "pub_year": 1963,
+    "category": "Espionaje",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-R8S9T",
+    "title": "El topo",
+    "author": "John le Carré",
+    "pub_year": 1974,
+    "category": "Espionaje",
+    "status": "Prestado",
+    "loan": {
+      "name": "Natalia Vargas",
+      "loan_date": "2025-05-08"
+    }
+  },
+  {
+    "id": "LIB-S9T0U",
+    "title": "La casa Rusia",
+    "author": "John le Carré",
+    "pub_year": 1989,
+    "category": "Espionaje",
+    "status": "Disponible",
+    "loan": {}
+  },
+  {
+    "id": "LIB-T0U1V",
+    "title": "El ruiseñor",
+    "author": "Kristin Hannah",
+    "pub_year": 2015,
+    "category": "Ficción histórica",
+    "status": "Disponible",
+    "loan": {}
+  }
+]

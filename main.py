@@ -1,8 +1,10 @@
 from menus import table as tbl
 
 from utils.validations import to_valid_int
+from utils.persistence import load_data
 from books.add_books import add_book
 from books.show_books import show_all_books, show_borrowed_books, show_available_books
+from books.search_books import search_author
 
 def menu_show_books(books: list):
   show_all_books(books)
@@ -57,7 +59,7 @@ def start():
     "Eliminar libro",
     "Salir"
   ]
-  books = []
+  books = load_data()
   
   flag = True
   while flag:
