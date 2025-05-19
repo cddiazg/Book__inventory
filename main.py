@@ -1,13 +1,14 @@
 from menus import table as tbl
 
 from utils.validations import to_valid_int
-# from books.add_books import add_book
+from books.add_books import add_book
 from books.show_books import show_all_books
 
-def menu_actions(action: int, data: list):
+def menu_actions(action: int, books: list):
+  new_books = books.copy()
   match action:
     case 1:
-      show_all_books(data)
+      show_all_books(books)
     case 2:
       pass
     case 3:
@@ -18,6 +19,7 @@ def menu_actions(action: int, data: list):
       pass
     case _:
       tbl.show_error("Opción no válida")
+  return new_books
 
 def start():
   # First menu
@@ -30,7 +32,7 @@ def start():
     "Eliminar libro",
     "Salir"
   ]
-  data = []
+  books = []
   
   flag = True
   while flag:
@@ -45,7 +47,7 @@ def start():
       flag = False
       continue
     
-    menu_actions(opt, data)
+    books = menu_actions(opt, books)
   
 if __name__ == "__main__":
   start()
