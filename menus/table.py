@@ -29,7 +29,7 @@ def show_menu(options: list, title: str):
 
 # Function to display a table with book information
 def show_books_in_table(books: list, table_title: str):
-    if not data or len(data) == 0:
+    if not books or len(books) == 0:
         tbl.show_error("Error: No hay datos o títulos para mostrar.")
         return
       
@@ -57,18 +57,18 @@ def show_books_in_table(books: list, table_title: str):
       else:
         table.add_column(value, justify="center", max_width=20)
 
-    for item in data:
-        id_book = item.get('id') 
+    for book in books:
+        id_book = book.get('id') 
         if id_book == None:
-            tbl.show_error(f"Error: {item} no tiene ID")
+            tbl.show_error(f"Error: {book} no tiene ID")
             continue
         
-        title = item.get('title', '-')
-        author = item.get('author', '-')
-        pub_year = str(item.get('pub_year', '-'))
-        category = item.get('category', '-')
+        title = book.get('title', '-')
+        author = book.get('author', '-')
+        pub_year = str(book.get('pub_year', '-'))
+        category = book.get('category', '-')
         
-        loan_info = item.get('loan', {})
+        loan_info = book.get('loan', {})
         if loan_info == {}:
             loan_info = "-"
         else:
@@ -79,7 +79,7 @@ def show_books_in_table(books: list, table_title: str):
             else:
                 loan_info = "-"
 
-        status = item.get('status')
+        status = book.get('status')
         if status == "Prestado":
             status = f"[bold red]{status}[/]"
         else:

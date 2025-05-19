@@ -1,5 +1,17 @@
 from datetime import datetime
 import uuid
+
+# Function to generate a unique ID for each book
+def generate_id(prefix: str = "LIB-", lenght: int = 5):
+    random_part =uuid.uuid4().hex[:lenght].upper()
+    return f"{prefix}{random_part}"
+
+def get_id_history(books):
+    ids = set()
+    for book in books:
+        ids.add(book["id"])
+    return ids
+
 def add_book(books, title, author, year, category):
       
     current_year = datetime.now().year
@@ -11,9 +23,16 @@ def add_book(books, title, author, year, category):
     if category not in valid_categories:
         print("Categoría inválida. Debe ser una de las siguientes:", valid_categories)
         return []
-
+    
+    id_book = ""
+    id_history = get_id_history(books)
+    while id_book == "":
+        id_book = generate_id()
+        if id_book in id_history:
+            id_book = ""
+        
     libro = {
-        "id": str(uuid.uuid4()),
+        "id": id_book,
         "title": title,
         "author": author,
         "year": year,
