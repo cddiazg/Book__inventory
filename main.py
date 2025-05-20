@@ -67,7 +67,17 @@ def menu_actions(action: int, books: list):
     case 1:
       menu_show_books(books)
     case 2:
-      pass
+      flag = True
+      while flag:   
+        title = input("Ingrese el titulo: ")
+        author = input("Ingrese el autor: ")
+        year = to_valid_int(input("Ingrese el año: "))
+        if year == None:
+          tbl.show_error("Debe ingresar un año valido ")
+          continue
+        category = input("Ingrese la categoria: ")
+        new_books = add_book(books, title, author, year, category)
+        flag = False
     case 3:
       menu_serch_books(books)
       pass
