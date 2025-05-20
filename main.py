@@ -1,8 +1,10 @@
 from menus import table as tbl
-
+from books.loans import book_lend
 from utils.validations import to_valid_int
+from utils.persistence import load_data
 from books.add_books import add_book
 from books.show_books import show_all_books, show_borrowed_books, show_available_books
+from books.search_books import search_author
 
 def menu_show_books(books: list):
   show_all_books(books)
@@ -29,6 +31,36 @@ def menu_show_books(books: list):
     elif opt == filters.index("Todos") + 1:
       show_all_books(books)
 
+def menu_serch_books(books: list):
+  search_options = [
+    "Busqueda por titulo",
+    "Busqueda por autor",
+    "Busqueda por categoria",
+    "volver",
+  ]
+  
+  opt = 0
+  back = search_options.index("volver") + 1
+  while opt != back:
+    tbl.show_menu(search_options, "Opciones de busqueda:")
+    opt = to_valid_int(input("Selecciona una opción: "))
+    if opt == None:
+      tbl.show_info("Opción no válida")
+      continue
+    
+    match opt:
+      case 1:
+        print("Busqueda por id")
+      case 2:
+        author = input("Ingrese el autor a buscar: ")
+        new_books = search_author(books, author)
+        if new_books == None:
+          continue
+        tbl.show_books_in_table(new_books, "Libros por autor")
+      case 3:
+        print("Busqueda por categoria")
+
+
 def menu_actions(action: int, books: list):
   new_books = books.copy()
   match action:
@@ -37,6 +69,7 @@ def menu_actions(action: int, books: list):
     case 2:
       pass
     case 3:
+      menu_serch_books(books)
       pass
     case 4:
       pass
@@ -57,7 +90,7 @@ def start():
     "Eliminar libro",
     "Salir"
   ]
-  books = []
+  books = load_data()
   
   flag = True
   while flag:

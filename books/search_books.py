@@ -6,7 +6,7 @@ def search_author(books, author):
     author = author.lower().strip()
 
     if len(author.replace(" ", "")) == 0:
-        show_error("debes especificar un author para buscar")
+        show_error("debes especificar un autor para buscar")
         return search_author
     # Autor sin tildes
     author_normalized = unicodedata.normalize('NFKD', author).encode('ascii','ignore').decode('utf-8')
@@ -18,8 +18,7 @@ def search_author(books, author):
             books_author.append(book)  
 
     if not books_author:
-        show_error(f"author no encontrado: {author}")
+        show_error(f"autor no encontrado: {author}")
         return search_author
 
     return books_author
-
