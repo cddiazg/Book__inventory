@@ -17,7 +17,7 @@ def show_menu(options: list, title: str):
     all_options = options + [title]
     # Calculate the total width of the table
     max_width = max([len(opt) for opt in all_options])
-    width = max_width + 4  # Add padding for the borders
+    width = max_width + 8  # Add padding for the borders
 
     # Print the table
     print(f"{BLUE}╔{"═"*width}╗{RESET}")
@@ -30,7 +30,7 @@ def show_menu(options: list, title: str):
 # Function to display a table with book information
 def show_books_in_table(books: list, table_title: str):
     if not books or len(books) == 0:
-        tbl.show_error("Error: No hay datos o títulos para mostrar.")
+        show_error("Error: No hay datos o títulos para mostrar.")
         return
       
     titles = {
@@ -60,7 +60,7 @@ def show_books_in_table(books: list, table_title: str):
     for book in books:
         id_book = book.get('id') 
         if id_book == None:
-            tbl.show_error(f"Error: {book} no tiene ID")
+            show_error(f"Error: {book} no tiene ID")
             continue
         
         title = book.get('title', '-')
@@ -98,11 +98,20 @@ def show_info(info: str):
     print(f"{WHITE}║{RESET} {DARKGRAY}Info: {WHITE}{info.ljust(width - 8)}{RESET} {WHITE}║{RESET}")
     print(f"{WHITE}╚{"═"*width}╝{RESET}")
 
-# Function to display an error message in a table format
-def show_error(error: str):
-    width = len(error) + 30  # Add padding for the borders  
+# Function to display an information message in a table format
+def show_sucess(msg: str):
+    width = len(msg) + 30  # Add padding for the borders  
 
     # Print the table
+    print(f"{GREEN}╔{"═"*width}╗{RESET}")
+    print(f"{GREEN}║{RESET} {GREEN}Info: {WHITE}{msg.ljust(width - 8)}{RESET} {GREEN}║{RESET}")
+    print(f"{GREEN}╚{"═"*width}╝{RESET}")
+
+# Function to display an error message in a table format
+def show_error(error: str):
+    message_error = f"{RED}Error: {WHITE}{error}{RESET}"
+    width = len(message_error) # Add padding for the borders  
+    # Print the table
     print(f"{RED}╔{"═"*width}╗{RESET}")
-    print(f"{RED}║{RESET} {RED}Error: {WHITE}{error.ljust(width - 9)}{RESET} {RED}║{RESET}")
+    print(f"{RED}║{RESET} {message_error.ljust(width + 12)} {RED}║{RESET}")
     print(f"{RED}╚{"═"*width}╝{RESET}")
